@@ -10,8 +10,8 @@ import System.IO (hFlush, stdout)
 
 runProgram :: [LogItem] -> [LogMessage] -> IO ()
 runProgram items messages = do
-    putStrLn "\n\n\n=============== Personal Recipe Software ==============="
-    putStrLn $ replicate 56 '='
+    putStrLn "\n\n\n=============== Personal Recipe Record Apps ==============="
+    putStrLn $ replicate 59 '='
     putStrLn "(a) Show all Recipe Taken  (b) Add new medicine  (c) Remove medicine  (d) Exit program"
     choice <- prompt "Input choice: "
     case choice of
@@ -72,29 +72,6 @@ runProgram items messages = do
         _ -> do
             empty <- prompt "Wrong input! Press enter to try again."
             runProgram items messages
-
-showItem :: [LogItem] -> String
-showItem items = showItemFunc (length items) (take 2 items)
-  where
-    showItemFunc count [] = case count of
-        0 -> "The item list is currently empty.\n" ++ replicate 58 '='
-        1 -> "\n" ++ replicate 58 '='
-        2 -> "\n" ++ replicate 58 '='
-        _ -> "...and " ++ show (count - 2) ++ " more." ++ "\n" ++ replicate 58 '='
-    showItemFunc count (item : rest) =
-        "ID: " ++ show (itemId item)
-            ++ "\nDate"
-            ++ dateInput item
-            ++ "\nName: "
-            ++ itemName item
-            ++ "\nQuantity: "
-            ++ show (medAmount item)
-            ++ "\nDescription: "
-            ++ description item
-            ++ "\n"
-            ++ replicate 29 '-'
-            ++ "\n"
-            ++ showItemFunc count rest
 
 showAllItem :: [LogItem] -> String
 showAllItem [] = replicate 58 '='
