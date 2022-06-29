@@ -57,4 +57,4 @@ parseLogMessage message = do
                 ++ " | Timestamp: "
                 ++ show (currentTime)
                 ++ "\n"
-    appendFile "log/messages.log" parsedLogMessage
+    appendFile "log/messages.txt" parsedLogMessage

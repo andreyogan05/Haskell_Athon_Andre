@@ -1,0 +1,4 @@
+ItemID: 1 | Status: NEW | Quantity: 5 | Timestamp: 1656499196
+ItemID: 2 | Status: NEW | Quantity: 2 | Timestamp: 1656499235
+ItemID: 3 | Status: NEW | Quantity: 2 | Timestamp: 1656500438
+ItemID: 0 | Status: ERR | Quantity: 0 | Timestamp: 1656500467

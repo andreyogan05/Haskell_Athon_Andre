@@ -94,5 +94,5 @@ showAllItem (item : rest) =
 
 main :: IO ()
 main = do
-    items <- fmap parseItem (readFile "log/items.log")
+    items <- fmap parseItem (readFile "log/items.txt")
     runProgram items []

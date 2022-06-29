@@ -81,7 +81,7 @@ parseLogItem logItemList = do
                 ++ "\n"
                 ++ convertToLog rest
     let parsedLogItem = init $ convertToLog logItemList -- using init to remove the last \n at the end of the .log
-    writeFile "log/items.log" parsedLogItem
+    writeFile "log/items.txt" parsedLogItem
 
 parseItem :: String -> [LogItem]
 parseItem rawContent = map parseSingleItem (lines rawContent)
