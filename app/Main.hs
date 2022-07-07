@@ -10,8 +10,8 @@ import System.IO (hFlush, stdout)
 
 runProgram :: [LogItem] -> [LogMessage] -> IO ()
 runProgram items messages = do
-    putStrLn "\n\n\n=============== Personal Recipe Record Apps ==============="
-    putStrLn $ replicate 59 '='
+    putStrLn "\n\n\n=============== Personal Medical Record Apps ==============="
+    putStrLn $ replicate 61 '='
     putStrLn "(a) Show all Recipe Taken  (b) Add new medicine  (c) Remove medicine  (d) Exit program"
     choice <- prompt "Input choice: "
     case choice of
